@@ -4,8 +4,10 @@ is available by arrangement through {{rental.owner}}.
 <p><img src={{rental.image}} alt={{rental.type}}></p>
 
 <h2>Reviews</h2>
+  <!-- {{rental-popularity rental}} -->
 <ul>
-  {{#each rental.reviews as |review|}}
+  {{#each sortedReviews as |review|}}
+
   {{review-tile review=review destroyReview="destroyReview"}}
   {{/each}}
 </ul>
